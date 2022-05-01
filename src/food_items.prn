@@ -1,0 +1,101 @@
+﻿food_name,image_link,category,calories,fats (g),carbs (g),proteins (g),vitamins (mg),mood (-10 to 10),CLAIMED BY
+Cheeseburger,https://upload.wikimedia.org/wikipedia/commons/4/4d/Cheeseburger.jpg,dinner,350,17,35,14,0,5,Sean
+Coca Cola,https://img.freepik.com/free-photo/fresh-cola-drink-glass_144627-16201.jpg,drink,133,0,35,0,0,6,Tiffany
+Potato Chips,https://scene7.samsclub.com/is/image/samsclub/0002840004393_B,snacks,149,9.5,15,1.8,0,4,Nashra
+Granola Bar,https://previews.123rf.com/images/baibaz/baibaz1308/baibaz130800043/21968341-m%C3%BCsliriegel-mit-schokolade-auf-wei%C3%9Fem-hintergrund.jpg,snacks,172,5.7,29,3.6,0,,Nashra
+Mixed Nuts,https://cdn11.bigcommerce.com/s-riqk6cih6h/images/stencil/1280x1280/products/1322/1920/100700_1__10319.1640022161.png?c=1,snacks,303,27,12,8.5,0,,Nashra
+Brownie,https://upload.wikimedia.org/wikipedia/commons/6/68/Chocolatebrownie.JPG,dessert,117,1.2,14,1.7,0,,Nashra
+Oatmeal Raisin Cookie,https://image.shutterstock.com/image-photo/oatmeal-raisin-cookie-isolated-on-260nw-223712485.jpg,dessert,55,1.8,9,1,0,1,Nashra
+Candy,https://media.istockphoto.com/photos/colorful-lollipop-swirl-on-stick-isolated-on-white-background-striped-picture-id1181695027?k=20&m=1181695027&s=612x612&w=0&h=KS8TyhtKjNbfh-ENsoJ3zZxL5AOjeOyOaLxVdTAZQjo=,dessert,170,0,40,0,0,,Nashra
+Chocolate Bar,https://media.istockphoto.com/photos/milk-chocolate-bar-isolated-on-white-background-picture-id1125768986?k=20&m=1125768986&s=170667a&w=0&h=c5YAdavEo3Rx7UcF0teGXORgRle_UP_uMgAnp1BFmeo=,snacks,213,13,26,3.1,0,,Nashra
+Whole Milk,https://media.istockphoto.com/photos/milk-bottle-and-milk-glass-isolated-on-white-background-picture-id1081054200?k=20&m=1081054200&s=170667a&w=0&h=M6fND6-Z6aD-xvTmaA0m9VG9985ZUibSBvI_zVZEx94=,drink,149,8,12,8,0,,Nashra
+Orange Juice,https://img.freepik.com/free-photo/slices-orange-glass-orange-juice-white-background_55716-3.jpg,drink,112,0.5,26,1.7,0,,Nashra
+Milkshake,https://media.istockphoto.com/photos/strawberry-milkshake-picture-id157583034?b=1&k=20&m=157583034&s=170667a&w=0&h=OBvVkqTqDRTryoVo4sC6AC7RMn9HJsRvEgAqTrj-nAc=,drink,410,13,66,7,0,,Nashra
+Mountain Dew,https://previews.123rf.com/images/denismart/denismart1706/denismart170600113/80140161-london-uk-june-9-2017-bottle-of-mountain-dew-drink-on-ice-isolated-on-white-background-mountain-dew-.jpg,drink,114,0.2,30,0.6,0,,Nashra
+Oatmeal,https://media.istockphoto.com/photos/oatmeal-and-berries-bowl-picture-id538647045?k=20&m=538647045&s=612x612&w=0&h=ZbQn5AgX9S8Kqj0_Cf4tr2m7N8ZxsunOLv3qN-_d9_4=,breakfast,201,3.9,38,4.3,0,,Nashra
+Omelette,https://thumbs.dreamstime.com/z/omelette-white-background-sliced-tomato-basil-made-beaten-eggs-stuffed-onion-cheese-tomatoes-106308017.jpg,breakfast,316,25,2.7,20,0,,Nashra
+Pancakes,https://newhopemills.com/wp-content/uploads/2019/06/thanks_cakes.jpg,breakfast,345,14,46,8.8,0,,Nashra
+Pizza,https://thumbs.dreamstime.com/b/slice-pizza-white-background-peperroni-isolate-227051550.jpg,dinner,400,16,50,16,0,,Nashra
+Fried Chicken,https://previews.123rf.com/images/siraphol/siraphol1308/siraphol130801901/21868604-sma%C5%BCony-kurczak-na-bia%C5%82ym-tle.jpg,dinner,596,41,13,42,0,,Nashra
+Salad,https://i.pinimg.com/originals/95/9b/06/959b060d59d88a6f2daa6ecc978f862d.jpg,dinner,290,24,13,7,0,,Nashra
+Chicken Curry,https://media.istockphoto.com/photos/indian-chicken-curry-in-a-bowl-on-white-background-picture-id1181032587?k=20&m=1181032587&s=170667a&w=0&h=svk-0rCBUjdX__-2F_XOjmBUkHMH7mxpKoI3rUNtZuE=,dinner,345,12,45,15,0,,Nashra
+Shawarma,https://t4.ftcdn.net/jpg/02/17/47/99/360_F_217479956_rjuhbdGnRZ8cn5g88A7ZyJoiujhATZkB.jpg,dinner,408,24,10,41,0,,Nashra
+Noodles,https://c8.alamy.com/zooms/9/2122a82282c74132b84f62b9d8526cfe/2cdkjhx.jpg,dinner,490,19,72,10,0,,Nashra
+Vanilla Ice Cream,https://img.freepik.com/free-vector/ice-cream-delicious-ice-cream-waffle-cone-vanilla-ice-cream-vector-illustration-isolated-white-background_538993-308.jpg?w=2000,dessert,279,15,32,4.7,442.1003,7,Tiffany
+Grilled Cheese Sandwich,https://t3.ftcdn.net/jpg/01/96/24/30/360_F_196243096_25hEngJ8vFYYRmrL4gCYrHyQE71vu6jm.jpg,lunch,384,22,33,12,907.4029,3,Tiffany
+Starbucks Mocha Frappe,https://www.pngitem.com/pimgs/m/112-1124185_starbucks-frappuccino-png-midnight-mint-mocha-frappuccino-transparent.png,drink,292,4.5,53,9,200,5,Tiffany
+Waffles,https://live.staticflickr.com/7872/47550927852_389b0ae2dd_b.jpg,breakfast,592,30,68,14,722.8016,1,Tiffany
+Instant Ramen,https://img.freepik.com/free-photo/uncooked-instant-noodles-isolated-white-background_185193-31592.jpg,lunch,290,11,38,7,22.7,2,Tiffany
+Sushi Rolls,https://img.freepik.com/free-photo/rolls-isolated-white-background-close-up_185193-79254.jpg?t=st=1650566660~exp=1650567260~hmac=53a16feb3127f4b30fd55743dd359bb0273aee02fab764fbd0cb7f518f2053b6&w=1800,lunch,371,4.6,55,25,31.6001,3,Tiffany
+Tortilla Wraps,https://img.freepik.com/free-photo/tortilla-wrap-with-falafel-vegetables-isolated-white-background_123827-20382.jpg?t=st=1650568264~exp=1650568864~hmac=34d84449dc288b81420e6e738392df90e6d2112cfc9f3923fb5de6850f1288d7&w=1800,lunch,120,4,30,10,121.4,2,Tiffany
+Chocolate Cupcake,https://img.freepik.com/free-photo/close-up-tasty-chocolate-cupcake_1203-1901.jpg?t=st=1650568717~exp=1650569317~hmac=5e119a11cac85e88d1c89c2329d6f3a6302cc13aaf7d79156caabbc8b63f7a47&w=826,dessert,290,15,40,2,21.8,6,Tiffany
+Chocolate Chip Muffin,https://img.freepik.com/free-photo/muffin-chocolate-chip-isolated_1101-2631.jpg?t=st=1650568870~exp=1650569470~hmac=662c4db3ca0ca195d494dcf0c78edb5d0fe1dc184a8b6fe19e8b5f84d9695a5d&w=1060,dessert,279,13,39,4,221.6004,5,Tiffany
+Mango,https://img.freepik.com/free-photo/mango-peeled-cut-into-squares_1220-247.jpg?t=st=1650569105~exp=1650569705~hmac=5234c565dbabf3cc4df00ae2c3e5aba523eb4e997867aa482e5ed98dea04745b&w=1800,snacks,126,0.8,31,1.7,376.3,3,Tiffany
+Cashews,https://img.freepik.com/free-photo/cashew-nuts-isolated-white_1401-472.jpg?t=st=1650569310~exp=1650569910~hmac=af8513f1ed9dbf9bb20c3b045e5dcd6d1086183c4b2f2c4c7facae1bf197aac7&w=1800,snacks,164,13,8.9,4.2,167.6,2,Tiffany
+Garlic Bread,https://img.freepik.com/free-photo/garlic-herb-bread-slices_1339-2365.jpg?t=st=1650569489~exp=1650570089~hmac=f0caa2d8c9ed8524eb09a217493941779775921e83fe8005b490aaa49a4facd1&w=1800,breakfast,340,16.25,40,8.25,130.50025,4,Tiffany
+Pink Sprinkled Donut,https://img.freepik.com/free-vector/vector-colorful-icon-pink-doughnut-isolated-white-background_134830-1096.jpg?t=st=1650570195~exp=1650570795~hmac=ab699611eb037b393c9cd3cc737002184fc1655d38e364b3e2805214c904e76d&w=1060,breakfast,260,13,32,4,1.8,5,Tiffany
+Chicken Strips,https://img.freepik.com/free-photo/concept-fast-food-with-chicken-strips-isolated-white-background_185193-79826.jpg?t=st=1650570564~exp=1650571164~hmac=e7833823312e6dcef0ef8178bbb0ec38c2c9471627972370bdebc9943ba1d67b&w=1800,lunch,680,35,43,48,195.9001,6,Tiffany
+Chicken Shish Kebab,https://img.freepik.com/free-photo/tasty-chicken-shashlik-isolated-white-background_185193-73541.jpg?t=st=1650570564~exp=1650571164~hmac=9f1919dcd811cf8e8d0b8eced852cf2c195058ce0f798703f0c1e98cd3060ba9&w=1800,lunch,157,5.7,7.7,20,401,3,Tiffany
+Chamomile Tea,https://img.freepik.com/free-photo/close-up-tea-with-chamomile-flower-isolated-white_169016-16021.jpg?t=st=1650572314~exp=1650572914~hmac=16cc1f824f38da9c94df41a0c9c5b1df2bed7e18ef612db9c94e1edd569719cf&w=1800,drink,2.4,0,0.5,0,27,2,Tiffany
+Coffee Latte,https://img.freepik.com/free-vector/hand-drawn-latte-art-drink_53876-99219.jpg?w=1060,drink,103,3.9,10,6.7,617,2,Tiffany
+Cheesecake,https://img.freepik.com/free-photo/side-view-blue-cheesecake-with-different-berries-it-isolated-white_171337-12447.jpg?t=st=1650572737~exp=1650573337~hmac=e26b8f983d0212cc7bd391432c7efa306a53d1668e42c7e663c019d6fbeca282&w=1800,dessert,297,20,26,5.2,215.8004,6,Tiffany
+Strawberries,https://img.freepik.com/free-photo/beautiful-strawberries-isolated-white_93675-135639.jpg?t=st=1650573491~exp=1650574091~hmac=2cc9838f5c048eebd2462805841b7acdc7b8d17623f1cc3544240247c2d59fd3&w=1800,snacks,6.6,0,1.5,0.3,36.3,3,Tiffany
+Banana,https://th-thumbnailer.cdn-si-edu.com/4Nq8HbTKgX6djk07DqHqRsRuFq0=/1000x750/filters:no_upscale()/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/d5/24/d5243019-e0fc-4b3c-8cdb-48e22f38bff2/istock-183380744.jpg,snacks,200,0.7,51,2.5,0,2,Sean
+Mac and Cheese,https://images.ctfassets.net/o19mhvm9a2cm/6SLFia9epGlpdXdXWdZgw4/624faf07d1f5f6238a68eee5136521db/Website_Sides_MacNCheese.png,dinner,230,14,21,8,250,5,Sean
+Ribeye Steak,https://media.eataly.com/media/catalog/product/cache/21/image/9df78eab33525d08d6e5fb8d27136e95/3/2/32128-dry-aged-boneless-ribeye_1.jpg,dinner,930,65,0,93,5,5,Sean
+Celery,https://www.aldi.us/fileadmin/_processed_/8/f/csm_celery-desktop_0b7255d37d.jpg,snacks,14,0.2,3,0.7,500,1,Sean
+Kale,https://www.veggycation.com.au/siteassets/veggycationvegetable/kale.jpg,snacks,7.4,0.3,0.9,0.6,2000,0,Sean
+Apple,https://img.freepik.com/free-vector/red-apple-with-leaf-isolated_1284-42343.jpg?t=st=1650676011~exp=1650676611~hmac=7741a2a1f4e50f44f1ef124ea0041f2459f073eb70326219c7effa2b9a4e6fcf&w=740,snacks,95,0.3,25,0.5,206.2,3,Kailey
+French Toast,https://www.pngitem.com/pimgs/m/180-1800875_download-french-toast-png-photo-french-toast-cartoon.png,breakfast,354,14.4,42,13.6,374.6,5,Kailey
+Chili,https://img.freepik.com/free-photo/traditional-mexican-tex-mex-chili-con-carne-isolated-white-background_123827-19443.jpg?w=900,lunch,264,9.6,34,16,1062.8,4,Kailey
+Burrito,https://img.freepik.com/free-photo/grilled-burrito-with-beef-vegetables-isolated-white-background_157927-18009.jpg?w=740,dinner,653,39,39,35,1044.4,8,Kailey
+pho,https://img.freepik.com/free-photo/watercolor-vietnamese-soup-pho-isolated-white-background_91682-80.jpg?w=740,dinner,399,10,54,28,502,6,Kailey
+pecan pie,https://previews.123rf.com/images/cokemomo/cokemomo1411/cokemomo141100018/33397347-a-slice-of-pecan-pie-isolated-on-white-background.jpg,dessert,464,19,68,5.1,139.2,7,Kailey
+corn flakes with milk,https://img.freepik.com/free-photo/falling-corn-flakes-with-milk-splash-isolated-white-background_88281-5353.jpg?w=740,breakfast,210,0,45,9,572,3,Kailey
+biscuit with gravy,https://img.freepik.com/free-photo/traditional-american-biscuits-gravy-breakfast-isolated_123827-17548.jpg?w=900,breakfast,493,32,37,14,510.2,4,Kailey
+bagel with cream cheese,https://as1.ftcdn.net/v2/jpg/01/03/27/08/1000_F_103270897_cjKZsPE8NKTQy0AgLFrzqzopLg7UWjMy.jpg,breakfast,379,11,57,13,263.8,5,Kailey
+avocado toast,https://img.freepik.com/free-photo/delicious-toast-with-avocado-isolated-white-background_185193-27477.jpg?w=900,lunch,190,13,17,4,360.9,4,Kailey
+gyro,https://previews.123rf.com/images/boettcher/boettcher1305/boettcher130500005/19619235-gyros-pita-fastfood-mit-brot-auf-wei%C3%9Fem-hintergrund.jpg,lunch,651,19,72,46,976.7,5,Kailey
+chicken caesar wrap,https://previews.123rf.com/images/griffin024/griffin0241604/griffin024160400124/57843649-two-chicken-caesar-salad-sandwich-wraps-on-a-plate-isolated-against-white.jpg,lunch,600,30,50,35,303.5,6,Kailey
+fish tacos,https://img.freepik.com/free-photo/delicious-fish-tacos-isolated-white-top-view_495423-964.jpg?w=740,lunch,480,19.4,50,24,774,5,Kailey
+beef fried rice,https://previews.123rf.com/images/ryzhkov86/ryzhkov861710/ryzhkov86171000082/87431327-teppanyaki-fried-rice-with-beef-vegetables-fresh-herbs-and-seasonings-in-dark-bowl-on-white-isolated.jpg,dinner,352,8,55,16,211.5,7,Kailey
+corn nuts,https://previews.123rf.com/images/bwf211/bwf2111008/bwf211100800066/7564096-a-large-serving-of-roasted-and-salted-corn-nuts-on-a-white-background-.jpg,snacks,125,4.4,20,2.4,81,3,Kailey
+beef jerky,https://previews.123rf.com/images/domnicky/domnicky1909/domnicky190900014/129301319-portion-of-beef-jerky-isolated-on-a-white-background-close-up-.jpg,snacks,116,9,3.1,9.4,176.2,4,Kailey
+banana bread,https://img.freepik.com/free-photo/homemade-banana-bread-isolated-white-background_123827-16907.jpg?w=900,breakfast,240,9,39,3,1.1,4,Kailey
+enchiladas,https://img.freepik.com/free-vector/enchilada-plate-mexican-traditional-food-vector-vintage-hatching-color-illustration-isolated-white-background-hand-drawn-design_496122-275.jpg?w=740,lunch,346,17.6,26,22,745.2,3,Kailey
+huevos rancheros,https://previews.123rf.com/images/chandlervid85/chandlervid851706/chandlervid85170600042/79420578-mexican-breakfast-huevos-rancheros-in-iron-frying-pan-isolated-on-white-background.jpg,breakfast,280,15.4,20,16.2,632.6,5,Kailey
+hot cheetos,https://images.saucey.com/84441d70-2b10-4839-b89e-9bc23e4abb25.tfss-7bce3a33-cbc9-43f0-81f1-3ea710329b64-SN-CHETFLMN-SM.jpg,snacks,160,11,13,1,0.4,5,Kailey
+apple crisp,https://i2.wp.com/lifemadesimplebakes.com/wp-content/uploads/2017/11/The-Best-Apple-Crisp-1-680x1020.jpg,dessert,386,8.7,75,5.1,200,7,Sean
+tiramisu,"https://m.media-amazon.com/images/S/assets.wholefoodsmarket.com/PIE/product/5fd2f1869a733011da2ce195_jamierowley-2020-cen-ecommerce-pfds-tiramisufamilysizecake._TTD_._SR600,600_._QL100_.jpg",dessert,513,35,43,8.6,300,8,Sean
+beer,https://static.horiba.com/fileadmin/Horiba/_processed_/4/3/csm_csm_01_02-2019_Beer_Brewing_53ef2818e5_948557e774.png,drink,206,0,17,2.2,20,8,Sean
+water,https://www.sciencenews.org/wp-content/uploads/2018/11/112418_water_feat_free.jpg,drink,0,0,0,0,0,0,Sean
+cinnamon roll,https://slimandhuskys.com/wp-content/uploads/2019/07/OG-cinnamon-roll.jpg,breakfast,230,10,32,3,0,5,Sean
+grits,https://www.mastgeneralstore.com/prodimages/45145-DEFAULT-l.jpg,breakfast,298,11,44,9.6,320.52,0,Sean
+scrambled eggs,https://assets.bonappetit.com/photos/608ad57e77a4a61b2265530a/16:9/w_2560%2Cc_limit/Basically-Salt-Scramble.jpg,breakfast,328,24,3.5,22,404.2,3,Sean
+pop tarts,https://upload.wikimedia.org/wikipedia/commons/1/18/Strawberry-Pop-Tarts.jpg,breakfast,180,3,37,2,0,7,Sean
+quiche,https://cdn.shopify.com/s/files/1/0123/6854/3834/products/DSC00280_2400x.jpg?v=1626812261,breakfast,160,11,12,6,0,2,Sean
+hash browns,https://image.shutterstock.com/image-photo/single-partially-eaten-hash-brown-260nw-466517912.jpg,breakfast,435,27,46,4.1,20.61,4,Sean
+acai bowl,https://images.squarespace-cdn.com/content/v1/558499eae4b0f4cd8ade2a14/1633528342105-7E2M5XPEKPU6BCUVPXUB/MIXED+BERRY+ACAI+bowl,breakfast,211,6,35,5,0,6,Sean
+mcmuffin,https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/McD-Egg-McMuffin.jpg/1280px-McD-Egg-McMuffin.jpg,breakfast,452,29,29,21,5.835,6,Sean
+oreos,https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Oreo-Two-Cookies.png/800px-Oreo-Two-Cookies.png,snacks,308,13.2,48.4,2.8,0,8,Sean
+fruit snacks,https://cdn.theatlantic.com/media/mt/food/FruitSnacks-CC-Post.jpg,snacks,80,0,19,0,60,6,Sean
+Applesauce,https://t3.ftcdn.net/jpg/04/86/19/68/360_F_486196858_P3EUTCI5nIs9gL6dB4K2QZNi9MtYwc92.jpg,snacks,170,0.4,44,0.4,195.8,4,Kyle
+Orange Slices,https://static6.depositphotos.com/1020804/562/i/950/depositphotos_5627697-stock-photo-orange-slices.jpg,snacks,150,0,37,0,398.2,3,Kyle
+Pretzels,https://img.freepik.com/free-photo/glazed-salted-pretzels-isolated-white-background_93675-129944.jpg?t=st=1651018192~exp=1651018792~hmac=51ba8ebaa038a97ec3cdb9d21a6ec39db08710d06ddd12eb4c87dbe9bfc0da30&w=1800,snacks,154,1.2,32,4,101.8,6,Kyle
+Nachos & Cheese,https://thumbs.dreamstime.com/b/nacho-tray-melted-cheese-black-plastic-round-yellow-nachos-dip-isolated-white-background-179343942.jpg,snacks,453,28,46,5.7,562,8,Kyle
+Spaghetti & Meatballs,https://www.clipartkey.com/mpngs/m/208-2083297_download-images-background-toppng-spaghetti-and-meatballs-no.png,dinner,850,28,116,35,158.2,7,Kyle
+Lasagna,https://media02.stockfood.com/largepreviews/MjAxODM2OTc=/00651087-Piece-of-lasagna-on-white-background.jpg,dinner,348,12,40,19,724.8,7,Kyle
+Salmon,https://img.freepik.com/free-photo/grilled-salmon-fillet-with-sesame-herb-pepper-isolated-white-background_341862-3284.jpg,dinner,344,25,3.6,24,629,5,Kyle
+Grilled Shrimp,https://thumbs.dreamstime.com/b/roasted-peeled-prawn-skewer-isolated-white-background-grilled-shrimp-197789041.jpg,dinner,132,1.9,1.7,25,246.4,4,Kyle
+Chicken Noodle Soup,https://t4.ftcdn.net/jpg/02/91/42/21/360_F_291422145_AKdJ7e6Zutqs0hVYZDWK0POMPkq4co4c.jpg,dinner,60,1.9,7.5,2.9,68.2,3,Kyle
+Meatloaf,https://img.freepik.com/free-photo/traditional-american-meatloaf-with-ketcup-isolated-white-background_123827-20005.jpg?w=1060&t=st=1651169347~exp=1651169947~hmac=12964595a2abd46b943bbb97c305253eb8b08bd4994bbf4d4f71b269e9d325e3,dinner,240,18,4,16,2,4,Kyle
+Pad Thai,https://www.kindpng.com/picc/m/7-77379_noodle-png-image-pad-thai-noodles-and-company.png,dinner,318,16,29,16,331.9,7,Kyle
+Pork Fried Rice,https://media.istockphoto.com/photos/fried-rice-on-plate-isolated-on-white-background-picture-id1214326547?k=20&m=1214326547&s=612x612&w=0&h=ltmoawTrGdCnorXyJLTCcSsFsJ8RSoDjbKDLKRPVAMw=,dinner,354,8.2,55,15,267.1,6,Kyle
+Turkey Sandwich,https://media.istockphoto.com/photos/sliced-smoked-turkey-sandwich-picture-id157428069?k=20&m=157428069&s=612x612&w=0&h=5TUk3W5sxif2NkILNy637Fg8HxWHaHYnlhK8_mYTJW0=,lunch,322,10,27,29,389,4,Kyle
+Peanut Butter & Jelly Sandwich,https://upload.wikimedia.org/wikipedia/commons/a/a8/Peanut-Butter-Jelly-Sandwich.jpg,lunch,69,4.1,7.4,1.8,53.7,7,Kyle
+Hot Dog,https://media.istockphoto.com/photos/hot-dog-with-mustard-isolated-on-white-background-picture-id1271275190?k=20&m=1271275190&s=612x612&w=0&h=IDxhAnm2_QnV0o6GmzoXror-2aCeOJiF4IVOM9ZDz2U=,lunch,120,8,1,11,20.7,5,Kyle
+Sloppy Joe Sandwich,https://t4.ftcdn.net/jpg/01/14/83/99/360_F_114839937_drK7AZZSLmqrIpqJYce04TRxfgS4Imel.jpg,lunch,200,10,16,11,41.8,6,Kyle
+Garden Salad,https://media.istockphoto.com/photos/green-lettuce-salad-with-mixed-vegetables-picture-id1211166193?k=20&m=1211166193&s=612x612&w=0&h=CLL8Ac-6R26YaqRCn17UI9iMEjsRVykONpLXkmg6jv4=,lunch,311,28,14,2,40.7,0,Kyle
+Ham Sandwich,https://media.istockphoto.com/photos/sandwich-picture-id490653943?k=20&m=490653943&s=612x612&w=0&h=8FHxqm3UCLUU0u0nhgQ-_lyPIx1i_zbP_YLr2PY58nc=,lunch,242,8.7,26,14,404.1,4,Kyle
+Poke Bowl,https://thumbs.dreamstime.com/b/hawaiian-salmon-poke-bowl-seaweed-avocado-sesame-seeds-cucumber-isolated-white-background-top-view-hawaiian-salmon-158045864.jpg,lunch,170,2,29,8,71.1,5,Kyle
+Quesadilla,https://www.tacobueno.com/assets/food/quesadilla/Quesadilla_Cheese_490x360.jpg,lunch,330,18,28,13,435.3,8,Kyle
