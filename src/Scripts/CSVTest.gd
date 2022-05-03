@@ -5,18 +5,18 @@ extends Node
 # var a = 2
 # var b = "text"
 var path = "res://food_items.prn"
+var Food = preload("res://Scripts/Food.gd")
 
-Food = preload("res://Scripts/Food.gd")
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	data = Get_data()
+	var data = Get_data()
 	for food_data in data.values():
 		var newFood = Food.new(food_data)
-		add_child()
+		add_child(newFood) # not sure
 
 func Get_data():
-	#pass
 	var maindata = {}
 	var file = File.new()
 	file.open(path, file.READ)
