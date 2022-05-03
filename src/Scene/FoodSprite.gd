@@ -37,7 +37,6 @@ func _ready():
 	collision.shape.extents = img.get_size()
 	
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton && event.is_pressed() && event.button_index == BUTTON_LEFT:

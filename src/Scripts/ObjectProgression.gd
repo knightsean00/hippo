@@ -8,22 +8,16 @@ var categories = ["breakfast", "drink", "lunch", "snacks", "dinner", "dessert"]
 func _ready():
 	var object_choices = choose_objects() # Replace with function body.
 
-func choose_objects():
-	# todo check, want children to be all the food objects
-	var children = get_children()
-	var groupings = []
+func choose_objects(food_types):
 	
-	# store in categories dict, maps categories to foods in that category
-	var category_foods = {}
-	for food in children:
-		if category_foods.has(food.category):
-			category_foods[food].append(food)
-		else:
-			category_foods[food] = [food]
+	# food types = dictionary of category -> food (food["name"])
+	
+	# todo check this, want children to be all the food objects
+	var groupings = []
 	
 	# make 100 groupings (can change) in order of categories variable above
 	for r in range(100):
-		var current_category = categories[100 % 6]
+		var current_category = food_types[100 % 6]
 		var foods = [] + category_foods[current_category]
 		var sample = []
 		
@@ -33,7 +27,8 @@ func choose_objects():
 			sample.append(foods[x])
 			foods.remove(x)
 		groupings.append(sample)
-		
+	
+	# list of food names
 	return groupings
 		
 		
