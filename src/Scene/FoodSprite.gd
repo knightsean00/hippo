@@ -3,61 +3,42 @@ extends Area2D
 onready var sprite = get_node("Sprite")
 onready var collision = get_node("CollisionShape2D")
 
+signal FOOD_CLICKED
 
-var food_items = "res://food_items.json"
+var texture
+var init_location
+var food_name
 
-var food_types = {
-	"breakfast": [],
-	"lunch": [],
-	"dinner": [],
-	"dessert": [],
-	"snacks": [],
-	"drinks": [],
-}
-	
-var images = []
-var rng = RandomNumberGenerator.new()
+func init(food_name, image, location = Vector2(0, 0)):
+	self.food_name = food_name
+	texture = image
+	init_location = location
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var file = File.new()
-	file.open(food_items, file.READ)
-	var text = file.get_as_text()
-	var output = JSON.parse(text).result
-	file.close()
-	for food in output:
-		var item = {
-			"category": food["category"],
-			"file_name": food["food_name"].split(" ").join("-").replace("&", "_").to_lower() + ".png",
-			"calories": float(food["calories"]),
-			"fats": float(food["fats (g)"]),
-			"mood": float(food["mood (0 to 10)"]),
-			"carbs": float(food["carbs (g)"]),
-			"proteins": float(food["proteins (g)"]),
-			"name": food["food_name"]
-		}
-		var fileCheck = File.new()
-		if !fileCheck.file_exists("res://Food/" + item["file_name"]):
-			print(item["name"])
-			print("res://Food/" + item["file_name"])
+	sprite.texture = texture
+	sprite.position = init_location
+	collision.shape.extents = texture.get_size()
+	collision.position = init_location
+#	self.position = init_location
+#	self.shape.extents = texture.get_size()
+	print(collision.position)
+	print(collision.shape.extents)
+#	print(position)
+#	print(self.shape)
+	print("food ready")
 	
-	
-#	var dir = Directory.new()
-#	if dir.open("res://Food/") == OK:
-#		dir.list_dir_begin()
-#		var file_name = dir.get_next()
-#		while file_name != "":
-#			if file_name.ends_with(".png"):
-#				images.append(load("res://Food/" + file_name))
-#			file_name = dir.get_next()
-#	var img = images[rng.randi_range(0, images.size() - 1)]
-#	sprite.set_texture(img)
-#	collision.shape.extents = img.get_size()
-	
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _input_event(_viewport, event, _shape_idx):
+#func _input(event):
 #	if event is InputEventMouseButton && event.is_pressed() && event.button_index == BUTTON_LEFT:
-#		var img = images[rng.randi_range(0, images.size() - 1)]
-#		sprite.set_texture(img)
-#		collision.shape.extents = img.get_size()
+#		print("clicked on sprite")
+
+
+func _input_event(_viewport, event, _shape_idx):
+	if event is InputEventMouseButton && event.is_pressed() && event.button_index == BUTTON_LEFT:
+		emit_signal("FOOD_CLICKED", food_name)
+#
+#func _unhandled_input(event):
+#	print("click")
+#	if event is InputEventMouseButton && event.is_pressed() && event.button_index == BUTTON_LEFT:
+#		print("sprite has been clicked")
+#		emit_signal("FOOD_CLICKED", self)

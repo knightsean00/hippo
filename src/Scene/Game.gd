@@ -15,6 +15,8 @@ var food_types = {
 
 var foods = {}
 
+var testSprite = preload("res://Scene/FoodSprite.tscn").instance()
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -38,8 +40,13 @@ func _ready():
 		foods[item["name"]] = item
 		
 	var sequence = generator.choose_objects(food_types)
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+	
+	testSprite.init(sequence[0][0], \
+		foods[sequence[0][0]]["image"], \
+		Vector2(floor(get_viewport().size.x / 2), floor(get_viewport().size.y / 2)))
+	get_parent().call_deferred("add_child", testSprite)
+	testSprite.connect("FOOD_CLICKED", self, "food_selected")
+	
+	
+func food_selected(food_name):
+	print(food_name + " was clicked")
