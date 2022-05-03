@@ -10,7 +10,7 @@ var food_types = {
 	"dinner": [],
 	"dessert": [],
 	"snacks": [],
-	"drinks": [],
+	"drink": [],
 }
 
 var foods = {}
@@ -35,7 +35,7 @@ func _ready():
 			"name": food["food_name"]
 		}
 		food_types[item["category"]].append(item)
-		foods[item["name"]].append(item)
+		foods[item["name"]] = item
 		
 	var sequence = generator.choose_objects(food_types)
 
