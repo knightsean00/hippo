@@ -8,25 +8,27 @@ signal FOOD_CLICKED
 var texture
 var init_location
 var food_name
+var height
 
-func init(food_name, image, location = Vector2(0, 0)):
+func init(food_name, image, location = Vector2(0, 0), height=64.0):
 	self.food_name = food_name
 	texture = image
 	init_location = location
+	self.height = height
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	sprite.texture = texture
 	sprite.position = init_location
-	collision.shape.extents = texture.get_size()
+	
+	var scaling = self.height / sprite.texture.get_height()
+	
+	sprite.scale = Vector2(scaling, scaling)
+	
+	print(sprite.scale)
+	
+	collision.shape.extents = sprite.texture.get_size()
 	collision.position = init_location
-#	self.position = init_location
-#	self.shape.extents = texture.get_size()
-	print(collision.position)
-	print(collision.shape.extents)
-#	print(position)
-#	print(self.shape)
-	print("food ready")
 	
 #func _input(event):
 #	if event is InputEventMouseButton && event.is_pressed() && event.button_index == BUTTON_LEFT:
