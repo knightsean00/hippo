@@ -77,8 +77,12 @@ func init(forbidden):
 	
 # Called when the node enters the scene tree for the first time.
 func _ready():
+<<<<<<< HEAD
 	print('forbidden', forbiddenFoods)
 #	forbiddenFoods = MainMenu.badFoods
+=======
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+>>>>>>> dd0b2bb2e7c406a53c15b39c6ca1e1fc70e328b2
 	var file = File.new()
 	file.open(food_items, file.READ)
 	var text = file.get_as_text()
