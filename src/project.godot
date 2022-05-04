@@ -28,7 +28,15 @@ config/icon="res://icon.png"
 
 window/size/width=320
 window/size/height=180
-window/stretch/mode="viewport"
+window/stretch/mode="2d"
+
+[global]
+
+font=false
+
+[gui]
+
+theme/custom_font="res://Fonts/Lato-Regular.ttf"
 
 [physics]
 
