@@ -52,14 +52,52 @@ func _input(event):
 		
 
 func regular():
-	global.forbiddenFoods = []
+	var forbiddenFoods = []
 	var parent = get_parent()
 	parent.remove_child(self)
 	var game = load("res://Scene/Level.tscn").instance()
+	game.init(forbiddenFoods, 5.0, 24)
+	parent.add_child(game)
+	
+func vegetarian():
+	var forbiddenFoods = ['Cheeseburger',
+		 'Fried Chicken',
+		 'Chicken Curry',
+		 'Shawarma',
+		 'Sushi Rolls',
+		 'Chicken Strips',
+		 'Chicken Shish Kebab',
+		 'Ribeye Steak',
+		 'Chili',
+		 'Burrito',
+		 'Pho',
+		 'Gyro',
+		 'Chicken Caesar Wrap',
+		 'Fish Tacos',
+		 'Beef Fried Rice',
+		 'Beef Jerky',
+		 'McMuffin',
+		 'Spaghetti & Meatballs',
+		 'Lasagna',
+		 'Salmon',
+		 'Grilled Shrimp',
+		 'Chicken Noodle Soup',
+		 'Meatloaf',
+		 'Pad Thai',
+		 'Pork Fried Rice',
+		 'Turkey Sandwich',
+		 'Hot Dog',
+		 'Sloppy Joe Sandwich',
+		 'Ham Sandwich',
+		 'Poke Bowl']
+	var parent = get_parent()
+	parent.remove_child(self)
+	var game = load("res://Scene/Level.tscn").instance()
+	game.init(forbiddenFoods, 4.0, 30)
 	parent.add_child(game)
 	
 func vegan():
-	global.forbiddenFoods = ['Cheeseburger',
+	var forbiddenFoods = ['Cheeseburger',
 			 'Brownie',
 			 'Oatmeal Raisin Cookie',
 			 'Whole Milk',
@@ -128,41 +166,5 @@ func vegan():
 	var parent = get_parent()
 	parent.remove_child(self)
 	var game = load("res://Scene/Level.tscn").instance()
-	parent.add_child(game)
-
-
-func vegetarian():
-	global.forbiddenFoods = ['Cheeseburger',
-		 'Fried Chicken',
-		 'Chicken Curry',
-		 'Shawarma',
-		 'Sushi Rolls',
-		 'Chicken Strips',
-		 'Chicken Shish Kebab',
-		 'Ribeye Steak',
-		 'Chili',
-		 'Burrito',
-		 'Pho',
-		 'Gyro',
-		 'Chicken Caesar Wrap',
-		 'Fish Tacos',
-		 'Beef Fried Rice',
-		 'Beef Jerky',
-		 'McMuffin',
-		 'Spaghetti & Meatballs',
-		 'Lasagna',
-		 'Salmon',
-		 'Grilled Shrimp',
-		 'Chicken Noodle Soup',
-		 'Meatloaf',
-		 'Pad Thai',
-		 'Pork Fried Rice',
-		 'Turkey Sandwich',
-		 'Hot Dog',
-		 'Sloppy Joe Sandwich',
-		 'Ham Sandwich',
-		 'Poke Bowl']
-	var parent = get_parent()
-	parent.remove_child(self)
-	var game = load("res://Scene/Level.tscn").instance()
+	game.init(forbiddenFoods, 3.0, 40)
 	parent.add_child(game)

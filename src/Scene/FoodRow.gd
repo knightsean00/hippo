@@ -10,10 +10,10 @@ signal ROW_CLICKED
 
 var foods
 var time = 0
-var screenTime = 5
+var screenTime = 5.0
 var clicked = false
 
-func init(foods, startY, screenTime = 5):
+func init(foods, startY, screenTime = 5.0):
 	self.screenTime = screenTime
 	self.foods = []
 	for i in range(foods.size()):

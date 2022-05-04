@@ -10,7 +10,7 @@ var bar_info = [
 		"init_val": 130,
 		"max_val": 500,
 		"ideal_val": 325,
-		"rate": -.1,
+		"rate": -7.5,
 		"color": Color("#E0A4AF"),
 		"position": Vector2(5, 16)
 	},
@@ -19,7 +19,7 @@ var bar_info = [
 		"init_val": 25,
 		"max_val": 160,
 		"ideal_val": 60,
-		"rate": -.024,
+		"rate": -1.8,
 		"color": Color("#FED148"),
 		"position": Vector2(35, 16)
 	},
@@ -28,7 +28,7 @@ var bar_info = [
 		"init_val": 35,
 		"max_val": 150,
 		"ideal_val": 75,
-		"rate": -.025,
+		"rate": -1.875,
 		"color": Color("#85A5EA"),
 		"position": Vector2(65, 16)
 	},
@@ -37,7 +37,7 @@ var bar_info = [
 		"init_val": 1000,
 		"max_val": 4000,
 		"ideal_val": 2000,
-		"rate": -.75,
+		"rate": -60,
 		"color": Color("#99C1B9"),
 		"position": Vector2(270, 16)
 	},
@@ -46,7 +46,7 @@ var bar_info = [
 		"init_val": 10,
 		"max_val": 20,
 		"ideal_val": 19,
-		"rate": -.011,
+		"rate": -.75,
 		"color": Color("#A192C8"),
 		"position": Vector2(300, 16)
 	},
@@ -68,11 +68,15 @@ var foods = {}
 var testSprite = preload("res://Scene/FoodSprite.tscn").instance()
 var testRow = preload("res://Scene/FoodRow.tscn").instance()
 var forbiddenFoods = []
+var n = 100
+var screenTime = 5.0
 
 signal ROW_CLICKED
-func init(forbidden):
-	forbiddenFoods = forbidden
-#	print('forbidden in init', forbiddenFoods)
+
+func init(forbidden, screenTime=5.0, n=100):
+	self.forbiddenFoods = forbidden
+	self.n = n
+	self.screenTime = screenTime
 	
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -101,14 +105,13 @@ func _ready():
 	
 	for bar in bar_info:
 		bars[bar["label"]] = load("res://Bar.tscn").instance()
-#		func init(label, init_val, max_val, grow_rate, color = Color(255, 255, 0)):
 	for bar in bar_info:
 		bars[bar["label"]].init(bar["label"], bar["init_val"], bar["ideal_val"], bar["max_val"], bar["rate"], bar["color"])
 		bars[bar["label"]].set_position(bar["position"])
 		self.call_deferred("add_child", bars[bar["label"]])
 		
 	
-	var sequence = generator.choose_objects(food_types)
+	var sequence = generator.choose_objects(food_types, self.n)
 	
 	# make groupings
 #	var height = get_viewport().size.y
@@ -120,7 +123,7 @@ func _ready():
 			food_dicts.append(foods[food])
 		var testRow = load("res://Scene/FoodRow.tscn").instance()
 		var startY = 0 - height * i
-		testRow.init(food_dicts, startY)
+		testRow.init(food_dicts, startY, self.screenTime)
 		self.call_deferred("add_child", testRow)
 		testRow.connect('ROW_CLICKED', self, "row_selected")
 	
@@ -128,7 +131,7 @@ func row_selected(food_name):
 #	print(food_name)
 #	print(global.forbiddenFoods.has(food_name))
 	var food_info = foods[food_name]
-	if global.forbiddenFoods.has(food_name):
+	if self.forbiddenFoods.has(food_name):
 		var lose_screen = load("res://Scene/Lose.tscn").instance()
 		var root = get_tree().get_root()
 		root.remove_child(root.get_node("Level"))

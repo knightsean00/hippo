@@ -23,15 +23,17 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	self.cur_val += self.grow_rate
+	self.cur_val += self.grow_rate * delta
 	var space = calc_space(self.cur_val, self.max_val)
 	self.set_position(space[1])
 	self.set_size(space[0])
 	
 	if cur_val > max_val:
 		emit_signal("LOSE", true)
+		cur_val = min(cur_val, max_val)
 	elif cur_val < 0:
 		emit_signal("LOSE", false)
+		cur_val = max(cur_val, 0)
 	
 
 func calc_space(cur_val, max_val):
