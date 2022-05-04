@@ -1,7 +1,7 @@
 extends Area2D
 
 onready var collision = get_node("CollisionShape2D")
-onready var audio = get_node("AudioStreamPlayer2D")
+onready var audio = get_node("AudioStreamPlayer")
 
 var foodSprite = load("res://Scene/FoodSprite.tscn").instance()
 var eating_sound = preload("res://Sounds/chomp.wav")
@@ -10,8 +10,7 @@ signal ROW_CLICKED
 
 var foods
 var time = 0
-var screenTime = 7
-var height = OS.get_window_size()
+var screenTime = 5
 var clicked = false
 
 func init(foods, startY):
@@ -41,4 +40,6 @@ func _ready():
 		add_child(foodSprite)
 		
 func _process(delta):
-	position += Vector2(0, height[1] * delta / screenTime)
+#	var height = get_viewport().size.y
+	var height = 180
+	position += Vector2(0, height * delta / screenTime)

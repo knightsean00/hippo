@@ -3,7 +3,6 @@ extends Node2D
 var generator = preload("res://Scripts/ObjectProgression.gd").new()
 
 var food_items = "res://food_items.json"
-var height = OS.get_window_size()[1]
 
 var bar_info = [
 	{
@@ -44,10 +43,10 @@ var bar_info = [
 	},
 	{
 		"label": "mood",
-		"init_val": 7.5,
+		"init_val": 10,
 		"max_val": 20,
 		"ideal_val": 19,
-		"rate": -.012,
+		"rate": -.011,
 		"color": Color("#A192C8"),
 		"position": Vector2(300, 16)
 	},
@@ -112,6 +111,8 @@ func _ready():
 	var sequence = generator.choose_objects(food_types)
 	
 	# make groupings
+#	var height = get_viewport().size.y
+	var height = 180
 	for i in range(sequence.size()):
 		var group = sequence[i]
 		var food_dicts = []

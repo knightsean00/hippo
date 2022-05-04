@@ -12,7 +12,7 @@ dest_files=[ "res://.import/chomp.wav-8b9747c42bec627eb0dd2d46a853c5c0.sample" ]
 [params]
 
 force/8_bit=false
-force/mono=false
+force/mono=true
 force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
