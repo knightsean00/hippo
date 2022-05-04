@@ -9,6 +9,9 @@ var label
 var grow_rate
 var color 
 
+#TODO: add function to deal with food selection
+#TODO: add line for ideal value
+
 func init(label, init_val, max_val, grow_rate, color = Color(255, 255, 0)):
 	self.label = label
 	self.cur_val = init_val

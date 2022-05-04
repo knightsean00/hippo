@@ -2,6 +2,7 @@ extends Area2D
 
 onready var sprite = get_node("Sprite")
 onready var collision = get_node("CollisionShape2D")
+onready var label = get_node("Label")
 
 signal FOOD_CLICKED
 
@@ -25,6 +26,8 @@ func init(food_name, image, location = Vector2(0, 0), height=36.0, width=36.0):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	label.text = self.food_name
+	
 	sprite.texture = texture
 	sprite.position = init_location
 	
@@ -39,9 +42,7 @@ func _ready():
 	collision.shape.extents = Vector2(self.height/2, self.height/2)
 	collision.position = init_location
 	
-#func _input(event):
-#	if event is InputEventMouseButton && event.is_pressed() && event.button_index == BUTTON_LEFT:
-#		print("clicked on sprite")
+	label.set_position(init_location + Vector2(-16, self.height/2))
 
 func _input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton && event.is_pressed() && event.button_index == BUTTON_LEFT:

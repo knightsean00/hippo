@@ -6,7 +6,7 @@ var max_val = 2000
 var grow_rate = 0
 var color
 
-func init(init_val, max_val, grow_rate, color = Color(255, 255, 0)):
+func init(init_val, max_val, grow_rate, color = Color(1, 0, 0)):
 	self.cur_val = init_val
 	self.max_val = max_val
 	self.grow_rate = grow_rate
@@ -15,7 +15,6 @@ func init(init_val, max_val, grow_rate, color = Color(255, 255, 0)):
 	var stylebox = self.get_stylebox("panel").duplicate()
 	stylebox.bg_color = self.color
 	self.add_stylebox_override("panel", stylebox)
-	print(stylebox.bg_color)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
