@@ -4,6 +4,56 @@ var generator = preload("res://Scripts/ObjectProgression.gd").new()
 
 var food_items = "res://food_items.json"
 
+var bar_info = [
+	{
+		"label": "carbs",
+		"init_val": 130,
+		"max_val": 500,
+		"ideal_val": 325,
+		"rate": -.1,
+		"color": Color("#E0A4AF"),
+		"position": Vector2(5, 16)
+	},
+	{
+		"label": "proteins",
+		"init_val": 25,
+		"max_val": 160,
+		"ideal_val": 60,
+		"rate": -.025,
+		"color": Color("#FED148"),
+		"position": Vector2(35, 16)
+	},
+	{
+		"label": "fats",
+		"init_val": 35,
+		"max_val": 150,
+		"ideal_val": 75,
+		"rate": -.05,
+		"color": Color("#85A5EA"),
+		"position": Vector2(65, 16)
+	},
+	{
+		"label": "calories",
+		"init_val": 1000,
+		"max_val": 4000,
+		"ideal_val": 2000,
+		"rate": -1,
+		"color": Color("#99C1B9"),
+		"position": Vector2(270, 16)
+	},
+	{
+		"label": "mood",
+		"init_val": 7.5,
+		"max_val": 20,
+		"ideal_val": 20,
+		"rate": -.01,
+		"color": Color("#A192C8"),
+		"position": Vector2(300, 16)
+	},
+]
+
+var bars = {}
+
 var food_types = {
 	"breakfast": [],
 	"lunch": [],
@@ -40,7 +90,16 @@ func _ready():
 		}
 		food_types[item["category"]].append(item)
 		foods[item["name"]] = item
+	
+	for bar in bar_info:
+		bars[bar["label"]] = load("res://Bar.tscn").instance()
+#		func init(label, init_val, max_val, grow_rate, color = Color(255, 255, 0)):
+	for bar in bar_info:
+		bars[bar["label"]].init(bar["label"], bar["init_val"], bar["max_val"], bar["rate"], bar["color"])
+		bars[bar["label"]].set_position(bar["position"])
+		get_parent().call_deferred("add_child", bars[bar["label"]])
 		
+	
 	var sequence = generator.choose_objects(food_types)
 	
 #	testSprite.init(sequence[0][0], \

@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Panel.gd" type="Script" id=1]
 [ext_resource path="res://bar-style.tres" type="StyleBox" id=2]
 [ext_resource path="res://Fonts/VT323-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Scene/ParentBar.gd" type="Script" id=4]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 1, 1, 1, 1 )
@@ -26,6 +27,7 @@ margin_top = 16.0
 margin_right = 72.0
 margin_bottom = 152.0
 custom_styles/panel = SubResource( 1 )
+script = ExtResource( 4 )
 
 [node name="Inner" type="Panel" parent="."]
 margin_top = 40.0
