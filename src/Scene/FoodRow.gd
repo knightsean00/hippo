@@ -30,6 +30,9 @@ func food_selected(food_name):
 	if not clicked:
 		emit_signal("ROW_CLICKED", food_name)
 		clicked = true
+		for sprite in self.foods:
+			if sprite.food_name != food_name:
+				remove_child(sprite)
 	
 # Called when the node enters the scene tree for the first time.
 func _ready():
