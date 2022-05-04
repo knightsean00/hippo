@@ -128,10 +128,11 @@ func row_selected(food_name):
 	print(global.forbiddenFoods.has(food_name))
 	var food_info = foods[food_name]
 	if global.forbiddenFoods.has(food_name):
-#		var loss = load("res://Scene/Lose.tscn").instance()
-		global.lossText = food_name + " cannot be eaten!"
-#		loss.init(food_name + " cannot be eaten!")
-		get_tree().change_scene("res://Scene/Lose.tscn")
+		var lose_screen = load("res://Scene/Lose.tscn").instance()
+		var root = get_tree().get_root()
+		root.remove_child(root.get_node("Level"))
+		lose_screen.init(food_name + " cannot be consumed!")
+		root.add_child(lose_screen)
 		
 	for label in bars:
 		var bar = bars[label]

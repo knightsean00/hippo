@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Fonts/VT323-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scene/Lose.gd" type="Script" id=2]
+[ext_resource path="res://Sounds/lose.wav" type="AudioStream" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 11
@@ -40,3 +41,7 @@ text = "you lost"
 align = 1
 valign = 1
 uppercase = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
