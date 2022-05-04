@@ -19,15 +19,24 @@ margin_bottom = 25.0
 rect_rotation = 0.178507
 
 [node name="RegularLevel" type="Button" parent="VBoxContainer"]
-margin_right = 97.0
+margin_right = 117.0
 margin_bottom = 20.0
 text = "Regular Level"
 
-[node name="HardLevel" type="Button" parent="VBoxContainer"]
+[node name="VegetarianLevel" type="Button" parent="VBoxContainer"]
 margin_top = 24.0
-margin_right = 97.0
+margin_right = 117.0
 margin_bottom = 44.0
-text = "Hard Level"
+text = "Vegetarian Level"
+
+[node name="VeganLevel" type="Button" parent="VBoxContainer"]
+margin_top = 48.0
+margin_right = 117.0
+margin_bottom = 68.0
+text = "Vegan Level"
 
 [connection signal="pressed" from="VBoxContainer/RegularLevel" to="." method="_on_RegularLevel_pressed"]
-[connection signal="pressed" from="VBoxContainer/HardLevel" to="." method="_on_HardLevel_pressed"]
+[connection signal="pressed" from="VBoxContainer/VegetarianLevel" to="." method="_on_HardLevel_pressed"]
+[connection signal="pressed" from="VBoxContainer/VegetarianLevel" to="." method="_on_VegetarianLevel_pressed"]
+[connection signal="pressed" from="VBoxContainer/VeganLevel" to="." method="_on_HardLevel_pressed"]
+[connection signal="pressed" from="VBoxContainer/VeganLevel" to="." method="_on_VeganLevel_pressed"]
