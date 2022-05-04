@@ -1,8 +1,10 @@
 extends Area2D
 
 onready var collision = get_node("CollisionShape2D")
+onready var audio = get_node("AudioStreamPlayer2D")
 
 var foodSprite = load("res://Scene/FoodSprite.tscn").instance()
+var eating_sound = preload("res://Sounds/chomp.wav")
 
 signal ROW_CLICKED
 
@@ -20,14 +22,13 @@ func init(foods, startY):
 	# add 4 sprites
 	for i in range(foods.size()):
 		var food_dict = foods[i]
-		self.foods[i].init(food_dict["name"], food_dict["image"], Vector2(i * 40 + 80, startY))
+		self.foods[i].init(food_dict["name"], food_dict["image"], Vector2(i * 40 + 83, startY))
 		self.foods[i].connect("FOOD_CLICKED", self, "food_selected")
 		
-#func food_selected(food_name):
-#	print(food_name + " was clicked")
 	
 func food_selected(food_name):
 	if not clicked:
+		audio.play()
 		emit_signal("ROW_CLICKED", food_name)
 		clicked = true
 		for sprite in self.foods:

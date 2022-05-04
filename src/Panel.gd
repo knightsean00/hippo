@@ -1,10 +1,11 @@
 extends Panel
 
-
 var cur_val = 1000
 var max_val = 2000
 var grow_rate = 0
 var color
+
+signal LOSE
 
 func init(init_val, max_val, grow_rate, color = Color(1, 0, 0)):
 	self.cur_val = init_val
@@ -26,6 +27,12 @@ func _process(delta):
 	var space = calc_space(self.cur_val, self.max_val)
 	self.set_position(space[1])
 	self.set_size(space[0])
+	
+	if cur_val > max_val:
+		emit_signal("LOSE", " was too high...")
+	elif cur_val < 0:
+		emit_signal("LOSE", " was too low...")
+	
 
 func calc_space(cur_val, max_val):
 	var max_pos = get_parent().get_position()
