@@ -73,9 +73,12 @@ var forbiddenFoods = []
 signal ROW_CLICKED
 func init(forbidden):
 	forbiddenFoods = forbidden
+	print('forbidden in init', forbiddenFoods)
 	
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	print('forbidden', forbiddenFoods)
+#	forbiddenFoods = MainMenu.badFoods
 	var file = File.new()
 	file.open(food_items, file.READ)
 	var text = file.get_as_text()
@@ -121,6 +124,11 @@ func _ready():
 func row_selected(food_name):
 	print(food_name + " was clicked")
 	var food_info = foods[food_name]
+	if food_name in forbiddenFoods:
+		var loss = load("res://Scene/Lose.tscn").instance()
+		loss.init(food_name + " cannot be eaten!")
+		get_tree().change_scene_to(loss)
+		
 	for label in bars:
 		var bar = bars[label]
 		var delta = food_info[label]

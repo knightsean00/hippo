@@ -13,7 +13,7 @@ func _on_RegularLevel_pressed():
 	badFoods = []
 	game.init(badFoods)
 	self.hide()
-	get_tree().change_scene("res://Scene/Level.tscn")
+	get_tree().change_scene(game)
 	
 func _on_VeganLevel_pressed():
 	badFoods = ['Cheeseburger',
@@ -83,10 +83,10 @@ func _on_VeganLevel_pressed():
 			 'Ham Sandwich',
 			 'Poke Bowl',
 			 'Quesadilla']
+#	game.init(badFoods)
+#	self.hide()
+	get_tree().change_scene_to(game)
 	game.init(badFoods)
-	self.hide()
-	get_tree().change_scene("res://Scene/Level.tscn")
-	pass # Replace with function body.
 
 
 func _on_VegetarianLevel_pressed():
@@ -120,5 +120,5 @@ func _on_VegetarianLevel_pressed():
 		 'Ham Sandwich',
 		 'Poke Bowl']
 	game.init(badFoods)
-	self.hide()
-	get_tree().change_scene("res://Scene/Level.tscn")
+#	self.hide()
+	get_tree().change_scene(game)
