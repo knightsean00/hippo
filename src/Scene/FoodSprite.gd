@@ -36,7 +36,6 @@ func _ready():
 
 	
 	var a = (sprite.texture.get_size() * sprite.scale)
-	print(a[0], a[1])
 	collision.shape.extents = Vector2(self.height/2, self.height/2)
 	collision.position = init_location
 	

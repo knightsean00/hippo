@@ -10,6 +10,7 @@ var foods
 var time = 0
 var screenTime = 7
 var height = OS.get_window_size()
+var clicked = false
 
 func init(foods, startY):
 	self.foods = []
@@ -26,8 +27,9 @@ func init(foods, startY):
 #	print(food_name + " was clicked")
 	
 func food_selected(food_name):
-	print(food_name, " is selected")
-	emit_signal("ROW_CLICKED", food_name)
+	if not clicked:
+		emit_signal("ROW_CLICKED", food_name)
+		clicked = true
 	
 # Called when the node enters the scene tree for the first time.
 func _ready():

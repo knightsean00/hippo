@@ -18,6 +18,7 @@ var foods = {}
 var testSprite = preload("res://Scene/FoodSprite.tscn").instance()
 var testRow = preload("res://Scene/FoodRow.tscn").instance()
 
+signal ROW_CLICKED
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -60,13 +61,9 @@ func _ready():
 		var startY = 0 - height * i
 		testRow.init(food_dicts, startY)
 		get_parent().call_deferred("add_child", testRow)
-		testRow.connect('ROW CLICKED', self, "row_selected")
+		testRow.connect('ROW_CLICKED', self, "row_selected")
 	
 func row_selected(food_name):
-	print('HI YO')
 	print(food_name + " was clicked")
+	# TODO what to do when you press a food
 	
-func food_selected(food_name):
-	print(food_name + " was clicked")
-	
-
