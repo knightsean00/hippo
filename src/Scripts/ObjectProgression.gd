@@ -10,12 +10,12 @@ func _ready():
 	pass
 #	var object_choices = choose_objects() # Replace with function body.
 
-func choose_objects(food_types):
+func choose_objects(food_types, n = 100):
 	rng.randomize()
 	var groupings = []
 	
 	# make 100 groupings (can change) in order of categories variable above
-	for c in range(100):
+	for c in range(n):
 		var current_category = categories[c % 6]
 		var foods = [] + food_types[current_category]
 		var sample = []

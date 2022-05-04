@@ -13,7 +13,8 @@ var time = 0
 var screenTime = 5
 var clicked = false
 
-func init(foods, startY):
+func init(foods, startY, screenTime = 5):
+	self.screenTime = screenTime
 	self.foods = []
 	for i in range(foods.size()):
 		self.foods.append(load("res://Scene/FoodSprite.tscn").instance())
@@ -42,4 +43,4 @@ func _ready():
 func _process(delta):
 #	var height = get_viewport().size.y
 	var height = 180
-	position += Vector2(0, height * delta / screenTime)
+	position += Vector2(0, height * delta / self.screenTime)

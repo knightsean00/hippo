@@ -105,7 +105,6 @@ func vegan():
 			 'Apple Crisp',
 			 'Tiramisu',
 			 'Cinnamon roll',
-			 'Grits',
 			 'Scrambled Eggs',
 			 'Pop Tarts',
 			 'Quiche',
