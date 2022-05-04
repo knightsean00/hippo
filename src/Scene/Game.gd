@@ -42,10 +42,10 @@ func _ready():
 		
 	var sequence = generator.choose_objects(food_types)
 	
-	testSprite.init(sequence[0][0], \
-		foods[sequence[0][0]]["image"], \
-		Vector2(floor(get_viewport().size.x / 2), floor(get_viewport().size.y / 2)))
-	get_parent().call_deferred("add_child", testSprite)
+#	testSprite.init(sequence[0][0], \
+#		foods[sequence[0][0]]["image"], \
+#		Vector2(floor(get_viewport().size.x / 2), floor(get_viewport().size.y / 2)))
+#	get_parent().call_deferred("add_child", testSprite)
 	
 #	testSprite.connect("FOOD_CLICKED", self, "food_selected")
 
@@ -53,11 +53,11 @@ func _ready():
 	for food in sequence[0]:
 		food_dicts.append(foods[food])
 	testRow.init(food_dicts)
-	add_child(testRow)
+	get_parent().call_deferred("add_child", testRow)
 #	get_parent().call_deferred("add_child", testRow)
 #	for food in testRow.foods:
 #		get_parent().call_deferred("add_child", food)
-	testRow.connect("ROW CLICKED", self, "row_selected")
+#	testRow.connect("ROW CLICKED", self, "row_selected")
 	
 	# connect food row here?
 	
