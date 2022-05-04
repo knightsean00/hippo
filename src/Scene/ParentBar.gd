@@ -19,6 +19,9 @@ func init(label, init_val, max_val, grow_rate, color = Color(255, 255, 0)):
 	self.grow_rate = grow_rate
 	self.color = color
 	
+func change_val(delta):
+	inner_bar.cur_val += delta
+	
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	inner_bar.init(self.cur_val, self.max_val, self.grow_rate, self.color)
