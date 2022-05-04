@@ -41,15 +41,26 @@ func _input(event):
 		
 	if event is InputEventKey && event.pressed && [16777221, 16777222, 32].has(event.scancode):
 		if cur_select == 0:
-#			yield(get_tree().create_timer(3.0), "timeout")
-			regular()
+			primer("regular")
 		elif cur_select == 1:
-#			yield(get_tree().create_timer(3.0), "timeout")
-			vegetarian()
+			primer("vegetarian")
 		elif cur_select == 2:
-#			yield(get_tree().create_timer(3.0), "timeout")
-			vegan()
-		
+			primer("vegan")
+
+func primer(f):
+	var timing = 1.0
+	$Unrestricted.text = ""
+	$Vegetarian.text = ""
+	$Vegan.text = ""
+	$Title.text = ""
+	$Primer.text = "READY"
+	yield(get_tree().create_timer(timing), "timeout")
+	$Primer.text = "SET"
+	yield(get_tree().create_timer(timing), "timeout")
+	$Primer.text = "GO!"
+	yield(get_tree().create_timer(timing), "timeout")
+	
+	call(f)
 
 func regular():
 	var forbiddenFoods = []
