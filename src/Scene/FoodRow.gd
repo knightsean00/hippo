@@ -16,13 +16,17 @@ func init(foods):
 	# add 4 sprites
 	for i in range(foods.size()):
 		var food_dict = foods[i]
-		print('newsprite ', food_dict["name"])
-		self.foods[i].init(food_dict["name"], food_dict["image"], Vector2(i * 70, 0))
-#		newSprite.connect("FOOD_CLICKED", self, "food_selected")
+		self.foods[i].init(food_dict["name"], food_dict["image"], Vector2(i * 40 + 60, 0))
+		self.foods[i].connect("FOOD_CLICKED", self, "food_selected")
 #
+#func food_selected(food_name):
+#	print(food_name + " was clicked")
+func row_selected(foods):
+	print('in row selected')
+	
 func food_selected(food_name):
-	print(food_name + " was clicked")
-
+	print(food_name, " is selected")
+	
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	print("ready")

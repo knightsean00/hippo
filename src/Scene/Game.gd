@@ -54,15 +54,11 @@ func _ready():
 		food_dicts.append(foods[food])
 	testRow.init(food_dicts)
 	get_parent().call_deferred("add_child", testRow)
-#	get_parent().call_deferred("add_child", testRow)
-#	for food in testRow.foods:
-#		get_parent().call_deferred("add_child", food)
-#	testRow.connect("ROW CLICKED", self, "row_selected")
 	
-	# connect food row here?
+	testRow.connect('ROW CLICKED', self, "row_selected")
 	
 func row_selected(foods):
-	pass
+	print('HI')
 	
 func food_selected(food_name):
 	print(food_name + " was clicked")
