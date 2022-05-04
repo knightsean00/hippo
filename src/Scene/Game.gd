@@ -16,6 +16,7 @@ var food_types = {
 var foods = {}
 
 var testSprite = preload("res://Scene/FoodSprite.tscn").instance()
+var testRow = preload("res://Scene/FoodRow.tscn").instance()
 
 
 # Called when the node enters the scene tree for the first time.
@@ -45,8 +46,23 @@ func _ready():
 		foods[sequence[0][0]]["image"], \
 		Vector2(floor(get_viewport().size.x / 2), floor(get_viewport().size.y / 2)))
 	get_parent().call_deferred("add_child", testSprite)
-	testSprite.connect("FOOD_CLICKED", self, "food_selected")
 	
+#	testSprite.connect("FOOD_CLICKED", self, "food_selected")
+
+	var food_dicts = []
+	for food in sequence[0]:
+		food_dicts.append(foods[food])
+	testRow.init(food_dicts)
+	add_child(testRow)
+#	get_parent().call_deferred("add_child", testRow)
+#	for food in testRow.foods:
+#		get_parent().call_deferred("add_child", food)
+	testRow.connect("ROW CLICKED", self, "row_selected")
+	
+	# connect food row here?
+	
+func row_selected(foods):
+	pass
 	
 func food_selected(food_name):
 	print(food_name + " was clicked")
