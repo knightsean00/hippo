@@ -48,17 +48,25 @@ func _ready():
 #	get_parent().call_deferred("add_child", testSprite)
 	
 #	testSprite.connect("FOOD_CLICKED", self, "food_selected")
-
-	var food_dicts = []
-	for food in sequence[0]:
-		food_dicts.append(foods[food])
-	testRow.init(food_dicts)
-	get_parent().call_deferred("add_child", testRow)
+	var height = OS.get_window_size()[1]
 	
-	testRow.connect('ROW CLICKED', self, "row_selected")
+	# make groupings
+	for i in range(sequence.size()):
+		var group = sequence[i]
+		var food_dicts = []
+		for food in group:
+			food_dicts.append(foods[food])
+		var testRow = load("res://Scene/FoodRow.tscn").instance()
+		var startY = 0 - height * i
+		testRow.init(food_dicts, startY)
+		get_parent().call_deferred("add_child", testRow)
+		testRow.connect('ROW CLICKED', self, "row_selected")
 	
-func row_selected(foods):
-	print('HI')
+func row_selected(food_name):
+	print('HI YO')
+	print(food_name + " was clicked")
 	
 func food_selected(food_name):
 	print(food_name + " was clicked")
+	
+
