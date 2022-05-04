@@ -76,6 +76,7 @@ func init(forbidden):
 	
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	var file = File.new()
 	file.open(food_items, file.READ)
 	var text = file.get_as_text()
