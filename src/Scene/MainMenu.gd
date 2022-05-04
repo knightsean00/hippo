@@ -9,15 +9,21 @@ var foods
 
 # Called when the node enters the scene tree for the first time.
 func _on_RegularLevel_pressed():
+	print('hi')
+	var game = load("res://Scene/Level.tscn").instance()
 	foods = []
 	# is this right?
-	var game = load("res://Scene/Game.tscn").instance().init(foods)
-	get_tree().change_scene("res://Scene/Game.tscn")
+	game.init(foods)
+	self.hide()
+	get_tree().change_scene("res://Scene/Level.tscn")
 	
 
 func _on_HardLevel_pressed():
 	# TODO ADD FOODS
 	foods = ['Cheeseburger']
-	var game = load("res://Scene/Game.tscn").instance().init(foods)
-	get_tree().change_scene("res://Scene/Game.tscn")
+	var game = load("res://Scene/Level.tscn").instance()
+	game.init(foods)
+	
+	self.hide()
+	get_tree().change_scene("res://Scene/Level.tscn")
 
