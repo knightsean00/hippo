@@ -29,9 +29,9 @@ func _process(delta):
 	self.set_size(space[0])
 	
 	if cur_val > max_val:
-		emit_signal("LOSE", " was too high...")
+		emit_signal("LOSE", true)
 	elif cur_val < 0:
-		emit_signal("LOSE", " was too low...")
+		emit_signal("LOSE", false)
 	
 
 func calc_space(cur_val, max_val):

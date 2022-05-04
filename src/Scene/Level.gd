@@ -20,7 +20,7 @@ var bar_info = [
 		"init_val": 25,
 		"max_val": 160,
 		"ideal_val": 60,
-		"rate": -.025,
+		"rate": -.024,
 		"color": Color("#FED148"),
 		"position": Vector2(35, 16)
 	},

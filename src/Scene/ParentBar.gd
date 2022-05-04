@@ -31,11 +31,20 @@ func _ready():
 	var ideal_pos = (1 - (float(self.ideal_val) / float(self.max_val))) * self.get_size().y
 	ideal.set_position(Vector2(0, ideal_pos))
 	
-	if label != "mood":
-		connect("LOSE", self, "handle_loss")
+	inner_bar.connect("LOSE", self, "handle_loss")
 		
-func handle_loss(text):
-	pass
-#	var level = get_tree().get_root().get_node("GameRoot")
-#	root.remove_child(level)
-#	level.call_deferred("free")
+func handle_loss(too_high):
+	if too_high && self.label == "mood":
+		return
+		
+	var level = get_tree().get_root().get_node("Level")
+	get_tree().get_root().remove_child(level)
+	
+	var lose_screen = load("res://Scene/Lose.tscn").instance()
+	if too_high && self.label != "mood":
+		lose_screen.init("Your consumption of " + self.label.to_upper() + " was too high...")
+	elif !too_high && self.label != "mood":
+		lose_screen.init("Your consumption of " + self.label.to_upper() + " was too low...")
+	elif !too_high && self.label == "mood":
+		lose_screen.init("Your " + self.label.to_upper() + " was too low...")
+	get_tree().get_root().add_child(lose_screen)
