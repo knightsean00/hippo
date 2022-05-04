@@ -3,6 +3,7 @@ extends Node2D
 var generator = preload("res://Scripts/ObjectProgression.gd").new()
 
 var food_items = "res://food_items.json"
+var height = OS.get_window_size()[1]
 
 var bar_info = [
 	{
@@ -102,14 +103,6 @@ func _ready():
 	
 	var sequence = generator.choose_objects(food_types)
 	
-#	testSprite.init(sequence[0][0], \
-#		foods[sequence[0][0]]["image"], \
-#		Vector2(floor(get_viewport().size.x / 2), floor(get_viewport().size.y / 2)))
-#	get_parent().call_deferred("add_child", testSprite)
-	
-#	testSprite.connect("FOOD_CLICKED", self, "food_selected")
-	var height = OS.get_window_size()[1]
-	
 	# make groupings
 	for i in range(sequence.size()):
 		var group = sequence[i]
@@ -124,5 +117,8 @@ func _ready():
 	
 func row_selected(food_name):
 	print(food_name + " was clicked")
-	# TODO what to do when you press a food
-	
+	var food_info = foods[food_name]
+	for label in bars:
+		var bar = bars[label]
+		var delta = food_info[label]
+		bar.change_val(delta)

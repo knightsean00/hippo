@@ -20,7 +20,7 @@ func init(foods, startY):
 	# add 4 sprites
 	for i in range(foods.size()):
 		var food_dict = foods[i]
-		self.foods[i].init(food_dict["name"], food_dict["image"], Vector2(i * 40 + 60, startY))
+		self.foods[i].init(food_dict["name"], food_dict["image"], Vector2(i * 40 + 80, startY))
 		self.foods[i].connect("FOOD_CLICKED", self, "food_selected")
 		
 #func food_selected(food_name):
