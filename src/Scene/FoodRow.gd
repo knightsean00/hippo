@@ -7,6 +7,7 @@ var foodSprite = load("res://Scene/FoodSprite.tscn").instance()
 var eating_sound = preload("res://Sounds/chomp.wav")
 
 signal ROW_CLICKED
+signal ROW_MISSED
 
 var foods
 var time = 0
@@ -44,3 +45,9 @@ func _process(delta):
 #	var height = get_viewport().size.y
 	var height = 180
 	position += Vector2(0, height * delta / self.screenTime)
+	
+#	if self.get_position().y > 180:
+#		print(self.get_position())
+#		print(foods)
+#		print(get_parent().get_children())
+#		get_parent().remove_child(self)

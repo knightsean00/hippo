@@ -104,7 +104,7 @@ func _ready():
 		foods[item["name"]] = item
 	
 	for bar in bar_info:
-		bars[bar["label"]] = load("res://Bar.tscn").instance()
+		bars[bar["label"]] = load("res://Scene/Bar.tscn").instance()
 	for bar in bar_info:
 		bars[bar["label"]].init(bar["label"], bar["init_val"], bar["ideal_val"], bar["max_val"], bar["rate"], bar["color"])
 		bars[bar["label"]].set_position(bar["position"])
@@ -126,7 +126,24 @@ func _ready():
 		testRow.init(food_dicts, startY, self.screenTime)
 		self.call_deferred("add_child", testRow)
 		testRow.connect('ROW_CLICKED', self, "row_selected")
-	
+		
+#	var group = sequence[-1]
+#	var food_dicts = []
+#	for food in group:
+#		food_dicts.append(foods[food])
+#	var testRow = load("res://Scene/FoodRow.tscn").instance()
+#	var startY = 0 - height * (sequence.size() - 1)
+#	testRow.init(food_dicts, startY, self.screenTime)
+#	self.call_deferred("add_child", testRow)
+#	testRow.connect('ROW_CLICKED', self, "last_selected")
+#	testRow.connect("ROW_MISSED", self, "last_selected")
+
+func last_selected(food_name = null):
+	if food_name != null:
+		row_selected(food_name)
+		print("actually selected")
+	print("clean up here")
+
 func row_selected(food_name):
 #	print(food_name)
 #	print(global.forbiddenFoods.has(food_name))
