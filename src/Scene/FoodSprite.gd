@@ -11,7 +11,7 @@ var food_name
 var height
 var width
 
-func init(food_name, image, location = Vector2(0, 0), height=64.0, width=64.0):
+func init(food_name, image, location = Vector2(0, 0), height=36.0, width=36.0):
 	self.food_name = food_name
 	texture = image
 	init_location = location
