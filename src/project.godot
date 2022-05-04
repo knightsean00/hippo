@@ -24,6 +24,10 @@ config/name="game"
 run/main_scene="res://Scene/Game.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+global="*res://global.gd"
+
 [display]
 
 window/size/width=320

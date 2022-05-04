@@ -45,18 +45,15 @@ func _input(event):
 		elif cur_select == 1:
 			vegetarian()
 		elif cur_select == 2:
-#			vegan()
-			pass
+			vegan()
 		
 
 func regular():
-	badFoods = []
-	game.init(badFoods)
 	self.hide()
-	get_tree().change_scene(game)
+	get_tree().change_scene("res://Scene/Level.tscn")
 	
 func vegan():
-	badFoods = ['Cheeseburger',
+	global.forbiddenFoods = ['Cheeseburger',
 			 'Brownie',
 			 'Oatmeal Raisin Cookie',
 			 'Whole Milk',
@@ -124,13 +121,13 @@ func vegan():
 			 'Poke Bowl',
 			 'Quesadilla']
 #	game.init(badFoods)
-#	self.hide()
-	get_tree().change_scene_to(game)
-	game.init(badFoods)
+	self.hide()
+	get_tree().change_scene("res://Scene/Level.tscn")
+#	game.init(badFoods)
 
 
 func vegetarian():
-	badFoods = ['Cheeseburger',
+	global.forbiddenFoods = ['Cheeseburger',
 		 'Fried Chicken',
 		 'Chicken Curry',
 		 'Shawarma',
@@ -146,6 +143,7 @@ func vegetarian():
 		 'Fish Tacos',
 		 'Beef Fried Rice',
 		 'Beef Jerky',
+		 'McMuffin',
 		 'Spaghetti & Meatballs',
 		 'Lasagna',
 		 'Salmon',
@@ -159,6 +157,6 @@ func vegetarian():
 		 'Sloppy Joe Sandwich',
 		 'Ham Sandwich',
 		 'Poke Bowl']
-	game.init(badFoods)
-#	self.hide()
-	get_tree().change_scene(game)
+		
+	self.hide()
+	get_tree().change_scene("res://Scene/Level.tscn")

@@ -8,4 +8,7 @@ func init(text):
 	self.text = text
 
 func _ready():
-	reason.text = self.text
+	if global.lossText != "":
+		reason.text = global.lossText
+	else:
+		reason.text = self.text
