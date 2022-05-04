@@ -21,8 +21,8 @@ func _ready():
 #		print(node.get_position())
 #		print(node.get_size())
 
-#func _input_event(_viewport, event, _shape_idx):
-#	print(_shape_idx)
+func _input_event(_viewport, event, _shape_idx):
+	print(_shape_idx)
 
 func _input(event):
 	if event is InputEventKey && event.pressed && (down.has(event.scancode) || up.has(event.scancode)):
@@ -39,7 +39,7 @@ func _input(event):
 			node.add_color_override("font_color", Color("#FFFFFF"))
 		options[cur_select].add_color_override("font_color", Color("#E0A4AF"))
 		
-	if event is InputEventKey && event.pressed && (event.scancode == 16777221 || event.scancode == 16777222):
+	if event is InputEventKey && event.pressed && [16777221, 16777222, 32].has(event.scancode):
 		if cur_select == 0:
 			regular()
 		elif cur_select == 1:
@@ -49,8 +49,9 @@ func _input(event):
 		
 
 func regular():
-	self.hide()
-	get_tree().change_scene("res://Scene/Level.tscn")
+	var parent = get_parent()
+	parent.remove_child(self)
+	parent.add_child(game)
 	
 func vegan():
 	global.forbiddenFoods = ['Cheeseburger',
@@ -120,10 +121,9 @@ func vegan():
 			 'Ham Sandwich',
 			 'Poke Bowl',
 			 'Quesadilla']
-#	game.init(badFoods)
-	self.hide()
-	get_tree().change_scene("res://Scene/Level.tscn")
-#	game.init(badFoods)
+	var parent = get_parent()
+	parent.remove_child(self)
+	parent.add_child(game)
 
 
 func vegetarian():
@@ -157,6 +157,6 @@ func vegetarian():
 		 'Sloppy Joe Sandwich',
 		 'Ham Sandwich',
 		 'Poke Bowl']
-		
-	self.hide()
-	get_tree().change_scene("res://Scene/Level.tscn")
+	var parent = get_parent()
+	parent.remove_child(self)
+	parent.add_child(game)

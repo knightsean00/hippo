@@ -36,9 +36,9 @@ func _ready():
 func handle_loss(too_high):
 	if too_high && self.label == "mood":
 		return
-		
-	var level = get_tree().get_root().get_node("Level")
-	get_tree().get_root().remove_child(level)
+	
+	var root = get_tree().get_root()
+	root.remove_child(root.get_node("Level"))
 	
 	var lose_screen = load("res://Scene/Lose.tscn").instance()
 	if too_high && self.label != "mood":
@@ -47,4 +47,4 @@ func handle_loss(too_high):
 		lose_screen.init("Your consumption of " + self.label.to_upper() + " was too low...")
 	elif !too_high && self.label == "mood":
 		lose_screen.init("Your " + self.label.to_upper() + " was too low...")
-	get_tree().get_root().add_child(lose_screen)
+	root.add_child(lose_screen)

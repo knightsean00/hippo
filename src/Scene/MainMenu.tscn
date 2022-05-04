@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scene/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/VT323-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Sounds/title-theme.wav" type="AudioStream" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 22
@@ -46,9 +47,15 @@ margin_bottom = 44.0
 text = "Hard Level"
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 margin_right = 320.0
 margin_bottom = 180.0
 color = Color( 0, 0, 0, 1 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -15.0
+autoplay = true
 
 [node name="Unrestricted" type="Label" parent="."]
 margin_top = 80.0

@@ -79,6 +79,8 @@ func init(forbidden):
 func _ready():
 	print('bad', global.forbiddenFoods)
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	$ColorRect.set_size(OS.get_window_size())
+	
 	var file = File.new()
 	file.open(food_items, file.READ)
 	var text = file.get_as_text()
@@ -104,7 +106,7 @@ func _ready():
 	for bar in bar_info:
 		bars[bar["label"]].init(bar["label"], bar["init_val"], bar["ideal_val"], bar["max_val"], bar["rate"], bar["color"])
 		bars[bar["label"]].set_position(bar["position"])
-		get_parent().call_deferred("add_child", bars[bar["label"]])
+		self.call_deferred("add_child", bars[bar["label"]])
 		
 	
 	var sequence = generator.choose_objects(food_types)
@@ -118,7 +120,7 @@ func _ready():
 		var testRow = load("res://Scene/FoodRow.tscn").instance()
 		var startY = 0 - height * i
 		testRow.init(food_dicts, startY)
-		get_parent().call_deferred("add_child", testRow)
+		self.call_deferred("add_child", testRow)
 		testRow.connect('ROW_CLICKED', self, "row_selected")
 	
 func row_selected(food_name):
