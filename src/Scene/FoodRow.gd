@@ -28,8 +28,3 @@ func _ready():
 	print("ready")
 	for foodSprite in self.foods:
 		add_child(foodSprite)
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
