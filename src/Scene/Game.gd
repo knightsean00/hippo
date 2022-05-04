@@ -70,9 +70,15 @@ var testSprite = preload("res://Scene/FoodSprite.tscn").instance()
 var testRow = preload("res://Scene/FoodRow.tscn").instance()
 
 signal ROW_CLICKED
+var forbiddenFoods = []
+
+func init(foods):
+	print('in init')
+	forbiddenFoods = foods
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	print('forbidden ', forbiddenFoods)
 	var file = File.new()
 	file.open(food_items, file.READ)
 	var text = file.get_as_text()
