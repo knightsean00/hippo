@@ -32,7 +32,8 @@ func _ready():
 	ideal.set_position(Vector2(0, ideal_pos))
 	
 	inner_bar.connect("LOSE", self, "handle_loss")
-		
+
+# mood bar can go too high
 func handle_loss(too_high):
 	if too_high && self.label == "mood":
 		return

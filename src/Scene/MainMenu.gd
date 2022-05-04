@@ -5,13 +5,13 @@ onready var one = get_node("Vegetarian")
 onready var two = get_node("Vegan")
 
 var badFoods 
-var game = load("res://Scene/Level.tscn").instance()
 
 var cur_select = 0
 var down = [16777234, 83]
 var up = [16777232, 87]
 
 func _ready():
+	cur_select = 0
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 #	var options = [zero, one, two]
 #	for node in options:
@@ -21,8 +21,8 @@ func _ready():
 #		print(node.get_position())
 #		print(node.get_size())
 
-func _input_event(_viewport, event, _shape_idx):
-	print(_shape_idx)
+#func _input_event(_viewport, event, _shape_idx):
+#	print(_shape_idx)
 
 func _input(event):
 	if event is InputEventKey && event.pressed && (down.has(event.scancode) || up.has(event.scancode)):
@@ -49,8 +49,10 @@ func _input(event):
 		
 
 func regular():
+	global.forbiddenFoods = []
 	var parent = get_parent()
 	parent.remove_child(self)
+	var game = load("res://Scene/Level.tscn").instance()
 	parent.add_child(game)
 	
 func vegan():
@@ -123,6 +125,7 @@ func vegan():
 			 'Quesadilla']
 	var parent = get_parent()
 	parent.remove_child(self)
+	var game = load("res://Scene/Level.tscn").instance()
 	parent.add_child(game)
 
 
@@ -159,4 +162,5 @@ func vegetarian():
 		 'Poke Bowl']
 	var parent = get_parent()
 	parent.remove_child(self)
+	var game = load("res://Scene/Level.tscn").instance()
 	parent.add_child(game)

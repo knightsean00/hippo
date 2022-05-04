@@ -73,11 +73,11 @@ var forbiddenFoods = []
 signal ROW_CLICKED
 func init(forbidden):
 	forbiddenFoods = forbidden
-	print('forbidden in init', forbiddenFoods)
+#	print('forbidden in init', forbiddenFoods)
 	
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print('bad', global.forbiddenFoods)
+#	print('bad', global.forbiddenFoods)
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	$ColorRect.set_size(OS.get_window_size())
 	
@@ -124,8 +124,8 @@ func _ready():
 		testRow.connect('ROW_CLICKED', self, "row_selected")
 	
 func row_selected(food_name):
-	print(food_name)
-	print(global.forbiddenFoods.has(food_name))
+#	print(food_name)
+#	print(global.forbiddenFoods.has(food_name))
 	var food_info = foods[food_name]
 	if global.forbiddenFoods.has(food_name):
 		var lose_screen = load("res://Scene/Lose.tscn").instance()

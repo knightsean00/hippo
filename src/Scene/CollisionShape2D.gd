@@ -16,7 +16,7 @@ func _ready():
 #	pass
 
 func _input_event(_viewport, event, _shape_idx):
-	print("click")
+#	print("click")
 	if event is InputEventMouseButton && event.is_pressed() && event.button_index == BUTTON_LEFT:
-		print("sprite has been clicked")
+#		print("sprite has been clicked")
 		emit_signal("FOOD_CLICKED", self)
