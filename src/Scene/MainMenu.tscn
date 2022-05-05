@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scene/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/VT323-Regular.ttf" type="DynamicFontData" id=2]
@@ -13,6 +13,10 @@ font_data = ExtResource( 2 )
 [sub_resource type="RectangleShape2D" id=4]
 
 [sub_resource type="RectangleShape2D" id=5]
+
+[sub_resource type="DynamicFont" id=6]
+size = 72
+font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 48
@@ -99,6 +103,14 @@ uppercase = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Vegan"]
 visible = false
 shape = SubResource( 5 )
+
+[node name="Primer" type="Label" parent="."]
+margin_right = 320.0
+margin_bottom = 180.0
+custom_fonts/font = SubResource( 6 )
+align = 1
+valign = 1
+uppercase = true
 
 [node name="Title" type="Label" parent="."]
 margin_top = 20.0
