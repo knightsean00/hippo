@@ -195,12 +195,12 @@ func _process(delta):
 		var info = []
 		for i in range(bars.size()):
 			var new_dict = {}
-			var label = bars[i]["label"]
+			var label = bar_info[i]["label"]
 			var bar = bars[label]
-			new_dict["label"] = bars[i]["label"]
+			new_dict["label"] = bar_info[i]["label"]
 			new_dict["final_val"] = bar.final_val()
-			new_dict["ideal_val"] = str(bars[i]["ideal_val"])
-			new_dict["max_val"] = str(bars[i]["max_val"])
+			new_dict["ideal_val"] = str(bar_info[i]["ideal_val"])
+			new_dict["max_val"] = str(bar_info[i]["max_val"])
 			info.append(new_dict)
 		score_screen.init(info)
 		root.add_child(score_screen)	
