@@ -10,7 +10,10 @@ var cur_select = 0
 var down = [16777234, 83]
 var up = [16777232, 87]
 
+var starting = false
+
 func _ready():
+	starting = false
 	cur_select = 0
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 #	var options = [zero, one, two]
@@ -25,7 +28,7 @@ func _ready():
 #	print(_shape_idx)
 
 func _input(event):
-	if event is InputEventKey && event.pressed && (down.has(event.scancode) || up.has(event.scancode)):
+	if !starting && event is InputEventKey && event.pressed && (down.has(event.scancode) || up.has(event.scancode)):
 		var options = [zero, one, two]
 		if down.has(event.scancode):
 			cur_select += 1
@@ -39,12 +42,15 @@ func _input(event):
 			node.add_color_override("font_color", Color("#FFFFFF"))
 		options[cur_select].add_color_override("font_color", Color("#E0A4AF"))
 		
-	if event is InputEventKey && event.pressed && [16777221, 16777222, 32].has(event.scancode):
+	if !starting && event is InputEventKey && event.pressed && [16777221, 16777222, 32].has(event.scancode):
 		if cur_select == 0:
+			starting = true
 			primer("regular")
 		elif cur_select == 1:
+			starting = true
 			primer("vegetarian")
 		elif cur_select == 2:
+			starting = true
 			primer("vegan")
 
 func primer(f):
@@ -67,7 +73,7 @@ func regular():
 	var parent = get_parent()
 	parent.remove_child(self)
 	var game = load("res://Scene/Level.tscn").instance()
-	game.init(forbiddenFoods, 5.0, 24)
+	game.init(forbiddenFoods, 4.0, 24)
 	parent.add_child(game)
 	
 func vegetarian():
@@ -177,5 +183,5 @@ func vegan():
 	var parent = get_parent()
 	parent.remove_child(self)
 	var game = load("res://Scene/Level.tscn").instance()
-	game.init(forbiddenFoods, 3.0, 40)
+	game.init(forbiddenFoods, 2.5, 40)
 	parent.add_child(game)

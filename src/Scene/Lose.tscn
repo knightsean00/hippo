@@ -26,9 +26,9 @@ margin_bottom = 180.0
 color = Color( 0, 0, 0, 1 )
 
 [node name="Reason" type="Label" parent="."]
-margin_left = 85.0
+margin_left = 64.0
 margin_top = 105.0
-margin_right = 235.0
+margin_right = 256.0
 margin_bottom = 152.0
 rect_pivot_offset = Vector2( 139, 55 )
 custom_fonts/font = SubResource( 1 )

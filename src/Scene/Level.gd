@@ -10,9 +10,9 @@ var bar_info = [
 	{
 		"label": "carbs",
 		"init_val": 130,
-		"max_val": 500,
+		"max_val": 400,
 		"ideal_val": 325,
-		"rate": -7.5,
+		"rate": -5,
 		"color": Color("#E0A4AF"),
 		"position": Vector2(5, 16)
 	},
@@ -37,9 +37,9 @@ var bar_info = [
 	{
 		"label": "calories",
 		"init_val": 1000,
-		"max_val": 4000,
+		"max_val": 3500,
 		"ideal_val": 2000,
-		"rate": -60,
+		"rate": -30,
 		"color": Color("#99C1B9"),
 		"position": Vector2(270, 16)
 	},
