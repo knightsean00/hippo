@@ -11,8 +11,9 @@ var init_score = 0
 func init(bar_info):
 	# Expect bar_info as a list of dictionaries of form:
 	# {label: "", final_val: , ideal_val: , max_val: }
-	
+#	print('bar', bar_info)
 	for bar in bar_info:
+		print('bar', bar)
 		if bar["label"] == "calories":
 			text += "Consumed " + bar["final_val"] + "calories, ideal was " + bar["ideal_val"]
 		elif bar["label"] == "mood":

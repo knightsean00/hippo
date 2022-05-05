@@ -22,6 +22,12 @@ func init(label, init_val, ideal_val, max_val, grow_rate, color = Color(255, 255
 	
 func change_val(delta):
 	inner_bar.cur_val += delta
+
+func final_val():
+	return str(inner_bar.cur_val)
+	
+func get_label():
+	return self.label
 	
 # Called when the node enters the scene tree for the first time.
 func _ready():

@@ -3,13 +3,16 @@ extends Node2D
 var generator = preload("res://Scripts/ObjectProgression.gd").new()
 
 var food_items = "res://food_items.json"
+#var win = false
+var lastRow
 
 var bar_info = [
 	{
 		"label": "carbs",
 		"init_val": 130,
 		"max_val": 500,
-		"ideal_val": 325,
+#		"ideal_val": 325,
+		"ideal_val": 200,
 		"rate": -7.5,
 		"color": Color("#E0A4AF"),
 		"position": Vector2(5, 16)
@@ -36,7 +39,8 @@ var bar_info = [
 		"label": "calories",
 		"init_val": 1000,
 		"max_val": 4000,
-		"ideal_val": 2000,
+#		"ideal_val": 2000,
+		"ideal_val": 1500,
 		"rate": -60,
 		"color": Color("#99C1B9"),
 		"position": Vector2(270, 16)
@@ -123,9 +127,14 @@ func _ready():
 			food_dicts.append(foods[food])
 		var testRow = load("res://Scene/FoodRow.tscn").instance()
 		var startY = 0 - height * i
-		testRow.init(food_dicts, startY, self.screenTime)
+		testRow.init(food_dicts, i, startY, self.screenTime)
 		self.call_deferred("add_child", testRow)
 		testRow.connect('ROW_CLICKED', self, "row_selected")
+		testRow.connect('ROW_IND', self, "row_index")
+#		if i == sequence.size() - 1:
+		print('hi', i)
+		lastRow = testRow
+		
 		
 #	var group = sequence[-1]
 #	var food_dicts = []
@@ -159,3 +168,39 @@ func row_selected(food_name):
 		var bar = bars[label]
 		var delta = food_info[label]
 		bar.change_val(delta)
+	
+func row_index(ind):
+	if ind >= 0:
+		var score_screen = load("res://Scene/Score.tscn").instance()
+		var root = get_tree().get_root()
+		root.remove_child(root.get_node("Level"))
+		var info = []
+		for i in range(bars.size()):
+			var new_dict = {}
+			var label = bar_info[i]["label"]
+			var bar = bars[label]
+			new_dict["label"] = bar_info[i]["label"]
+			new_dict["final_val"] = bar.final_val()
+			new_dict["ideal_val"] = str(bar_info[i]["ideal_val"])
+			new_dict["max_val"] = str(bar_info[i]["max_val"])
+			info.append(new_dict)
+		score_screen.init(info)
+		root.add_child(score_screen)	
+
+func _process(delta):
+	if lastRow.y >= 180:
+		var score_screen = load("res://Scene/Score.tscn").instance()
+		var root = get_tree().get_root()
+		root.remove_child(root.get_node("Level"))
+		var info = []
+		for i in range(bars.size()):
+			var new_dict = {}
+			var label = bars[i]["label"]
+			var bar = bars[label]
+			new_dict["label"] = bars[i]["label"]
+			new_dict["final_val"] = bar.final_val()
+			new_dict["ideal_val"] = str(bars[i]["ideal_val"])
+			new_dict["max_val"] = str(bars[i]["max_val"])
+			info.append(new_dict)
+		score_screen.init(info)
+		root.add_child(score_screen)	
