@@ -67,7 +67,7 @@ func regular():
 	var parent = get_parent()
 	parent.remove_child(self)
 	var game = load("res://Scene/Level.tscn").instance()
-	game.init(forbiddenFoods, 5.0, 3)
+	game.init(forbiddenFoods, 5.0, 24)
 	parent.add_child(game)
 	
 func vegetarian():
