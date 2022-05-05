@@ -11,8 +11,7 @@ var bar_info = [
 		"label": "carbs",
 		"init_val": 130,
 		"max_val": 500,
-#		"ideal_val": 325,
-		"ideal_val": 200,
+		"ideal_val": 325,
 		"rate": -7.5,
 		"color": Color("#E0A4AF"),
 		"position": Vector2(5, 16)
@@ -39,8 +38,7 @@ var bar_info = [
 		"label": "calories",
 		"init_val": 1000,
 		"max_val": 4000,
-#		"ideal_val": 2000,
-		"ideal_val": 1500,
+		"ideal_val": 2000,
 		"rate": -60,
 		"color": Color("#99C1B9"),
 		"position": Vector2(270, 16)
@@ -131,8 +129,6 @@ func _ready():
 		self.call_deferred("add_child", testRow)
 		testRow.connect('ROW_CLICKED', self, "row_selected")
 		testRow.connect('ROW_IND', self, "row_index")
-#		if i == sequence.size() - 1:
-		print('hi', i)
 		lastRow = testRow
 		
 		
@@ -147,11 +143,11 @@ func _ready():
 #	testRow.connect('ROW_CLICKED', self, "last_selected")
 #	testRow.connect("ROW_MISSED", self, "last_selected")
 
-func last_selected(food_name = null):
-	if food_name != null:
-		row_selected(food_name)
-		print("actually selected")
-	print("clean up here")
+#func last_selected(food_name = null):
+#	if food_name != null:
+#		row_selected(food_name)
+#		print("actually selected")
+#	print("clean up here")
 
 func row_selected(food_name):
 #	print(food_name)

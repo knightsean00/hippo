@@ -37,7 +37,6 @@ autowrap = true
 uppercase = true
 
 [node name="Info" type="Label" parent="."]
-visible = false
 margin_right = 310.0
 margin_bottom = 175.0
 rect_pivot_offset = Vector2( 139, 55 )

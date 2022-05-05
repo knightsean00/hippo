@@ -5,7 +5,7 @@ onready var score_node = get_node("Score")
 
 var text = ""
 
-var score = 5000000
+var score = 0
 var init_score = 0
 
 func init(bar_info):
@@ -13,25 +13,28 @@ func init(bar_info):
 	# {label: "", final_val: , ideal_val: , max_val: }
 #	print('bar', bar_info)
 	for bar in bar_info:
-		print('bar', bar)
+		var bar_score = (abs(float(bar["final_val"]) - float(bar["ideal_val"]))) / float(bar["max_val"])
+		bar_score = (1 - bar_score) * 500000
+		score += int(bar_score)
+		
+		bar["final_val"] = str(int(bar["final_val"]))
+		bar["ideal_val"] = str(int(bar["ideal_val"]))
+		bar["max_val"] = str(int(bar["max_val"]))
+#		print('bar', bar)
 		if bar["label"] == "calories":
-			text += "Consumed " + bar["final_val"] + "calories, ideal was " + bar["ideal_val"] + '\n'
+			text += "Consumed " + bar["final_val"] + " calories, ideal was " + bar["ideal_val"] + '\n'
 		elif bar["label"] == "mood":
 			text += "Your mood was " + bar["final_val"] + " out of " + bar["max_val"] + '\n'
 		else:
 			text += "Consumed " + bar["final_val"] + "g of " + bar["label"] + ", ideal was " + bar["ideal_val"] + "g" + '\n'
-		
-		var bar_score = (abs(float(bar["final_val"]) - float(bar["ideal_val"])) / float(bar["max_val"]))
-		bar_score = (1 - bar_score) * 1000000
-		score += int(bar_score)
-		
+
 func _input(event):
 	if event is InputEventKey && event.pressed:
 		var root = get_tree().get_root()
 		
 		var menu = load("res://Scene/MainMenu.tscn").instance()
 		
-		root.remove_child(root.get_node("LoseScreen"))
+		root.remove_child(root.get_node("ScoreScreen"))
 		root.add_child(menu)
 
 func _ready():
