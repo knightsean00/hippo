@@ -170,7 +170,7 @@ func row_selected(food_name):
 		bar.change_val(delta)
 	
 func row_index(ind):
-	if ind >= 0:
+	if ind >= n - 1:
 		var score_screen = load("res://Scene/Score.tscn").instance()
 		var root = get_tree().get_root()
 		root.remove_child(root.get_node("Level"))
